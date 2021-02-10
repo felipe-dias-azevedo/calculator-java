@@ -109,7 +109,7 @@ public class App {
                     break;
             }
             if (operator.getShowDecimals() || isRationalNumber) {
-                JOptionPane.showMessageDialog(null, String.format("Equals: %.1f", result));
+                JOptionPane.showMessageDialog(null, String.format("Equals: %.2f", result));
             } else {
                 // TODO: fix if number is integer (e.g.: 72 not rational)
                 JOptionPane.showMessageDialog(null, String.format("Equals: %.0f", result));
