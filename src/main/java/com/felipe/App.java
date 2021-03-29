@@ -7,7 +7,7 @@ import java.awt.event.KeyListener;
 import java.util.Arrays;
 
 public class App implements KeyListener {
-    private JPanel panelMain;
+    public JPanel panelMain;
     private JButton buttonZero;
     private JButton buttonOne;
     private JButton buttonTwo;
@@ -272,24 +272,7 @@ public class App implements KeyListener {
 
     }
 
-    public static void main(String[] args) throws ClassNotFoundException, UnsupportedLookAndFeelException, InstantiationException, IllegalAccessException {
-        try {
-            UIManager.setLookAndFeel("com.sun.java.swing.plaf.gtk.GTKLookAndFeel");
-        }
-        catch (Exception e) {
-            UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
-        }
-        JFrame frame = new JFrame("Calculator");
-        App app = new App();
-        frame.setContentPane(app.panelMain);
-        frame.setPreferredSize(new Dimension(360, 420));
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
-        frame.setFocusable(true);
-        frame.addKeyListener(app);
-    }
+
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
